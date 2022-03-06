@@ -34,6 +34,22 @@ export default defineConfig({
   targets: {
     ie: 11,
   },
+  qiankun: {
+    master: {
+      apps: [
+        {
+          name: 'app1', // 唯一 id
+          entry: '//localhost:3000', // html entry
+          // base: '/app1', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
+          // history: 'browser', // 子应用的 history 配置，默认为当前主应用 history 配置
+          // mountElementId: 'root',
+        }
+
+      ],
+      // jsSandbox: true,
+      // prefetch: true,
+    }
+  },
   // umi routes: https://umijs.org/docs/routing
   routes,
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
@@ -66,7 +82,7 @@ export default defineConfig({
     },
   ],
   nodeModulesTransform: { type: 'none' },
-  mfsu: {},
+  // mfsu: {},
   webpack5: {},
   exportStatic: {},
 });
