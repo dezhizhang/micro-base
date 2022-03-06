@@ -38,14 +38,18 @@ export default defineConfig({
     master: {
       apps: [
         {
-          name: 'app1', // 唯一 id
-          entry: '//localhost:3000', // html entry
+          name: 'sales', // 唯一 id
+          entry: 'http://localhost:8081', // html entry
           // base: '/app1', // app1 的路由前缀，通过这个前缀判断是否要启动该应用，通常跟子应用的 base 保持一致
           // history: 'browser', // 子应用的 history 配置，默认为当前主应用 history 配置
           // mountElementId: 'root',
         }
 
       ],
+      routes:[{path:'/info',microApp:'sales',component:'HomePage'}],
+      sandbox:true,
+      // prefetch:true,
+     
       // jsSandbox: true,
       // prefetch: true,
     }
