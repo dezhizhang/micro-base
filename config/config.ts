@@ -46,9 +46,8 @@ export default defineConfig({
         }
 
       ],
-      routes:[{path:'/info',microApp:'sales',component:'HomePage'}],
       sandbox:true,
-      // prefetch:true,
+      prefetch:true,
      
       // jsSandbox: true,
       // prefetch: true,

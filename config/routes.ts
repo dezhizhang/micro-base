@@ -1,4 +1,5 @@
-﻿export default [
+﻿
+export default [
   // {
   //   path: '/user',
   //   layout: false,
@@ -19,8 +20,9 @@
   //   ],
   // },
   {
-    path: '/welcome',
+    path: '/sales/info',
     name: 'welcome',
+    MicroApp:'sales',
     icon: 'smile',
     component: './Welcome',
   },
