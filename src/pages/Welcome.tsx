@@ -19,7 +19,7 @@ const Welcome: React.FC = () => {
         url="/"
         autoSetLoading
         onNameChange={(newName: React.SetStateAction<null>) => setName(newName)}
-        props={{ name: 'hello', "age": 22 }}
+        props={{ name: '我是主应用', "age": 22 }}
         errorBoundary={(error) => <div>Error: {error.message}</div>}
       />
     </div>
